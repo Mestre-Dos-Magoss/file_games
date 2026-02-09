@@ -1,10 +1,5 @@
 export default function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*")
-  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS")
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type")
-
-    res.status(200).json({
-        jogos: [
+       const jogos = [
         {
         name: "The Witcher 3: Wild Hunt" ,
         descripton: "Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.",
@@ -186,6 +181,16 @@ export default function handler(req, res) {
         descontPrice: "0",
         id: "14" 
         }
-        ]
-    })
+    ]
+
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end(); // Requisição pré-flight
+  }
+
+  // Retorna os dados
+  res.status(200).json(jogos);
 }
