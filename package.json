@@ -1,0 +1,15 @@
+{
+  "name": "games",
+  "version": "1.0.0",
+  "description": "games the store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+
+  "engines": {
+    "node": "22.x"
+  }
+}
