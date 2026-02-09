@@ -1,6 +1,6 @@
 export default function handler(req, res) {
     res.status(200).json({
-        Jogos: [
+        jogos: [
         {
         name: "The Witcher 3: Wild Hunt" ,
         descripton: "Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.",
